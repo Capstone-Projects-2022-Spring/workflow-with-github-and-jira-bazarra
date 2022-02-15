@@ -95,7 +95,7 @@ public class CalculatorModel {
             } else if (operation.equals("/")) {
                 displayValue = operationDiv(internalValue, displayValue);
             } else if (operation.equals("%")){
-                displayValue = operationPercent(displayValue);
+                displayValue = operationPercent(internalValue, displayValue);
             } else if (operation.equals("±")){
                 displayValue = operationInverse(displayValue);
             } else if (operation.equals("C")){
@@ -126,7 +126,9 @@ public class CalculatorModel {
         return rhs;
     }
 
-    public double operationPercent(double value) { return 0.1; }
+    public double operationPercent(double lhs, double rhs) {
+        return lhs%rhs;
+    }
 
     public double operationInverse(double value) { return -42.0; }
 
