@@ -35,7 +35,7 @@ public class CalculatorModelTest {
 	}
 
 	@Test
-	public void shouldInverse() { assertEquals(-42.0, calc.operationInverse(42.0), 0.1); }
+	public void shouldInverse() { assertEquals(-5.0, calc.operationInverse(-0.20), 0.1); }
 
 	@Test
 	public void shouldPercent() { assertEquals(0.1, calc.operationPercent(10.0), 0.1); }
